@@ -1,0 +1,411 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6FAD63C1-328D-4554-BA0C-B836F4B828E7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Menu</RootNamespace>
+    <AssemblyName>Menu</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\Compromissos.cs" />
+    <Compile Include="EOP_DemoDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EOP_DemoDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Banco.cs" />
+    <Compile Include="Controller\ServiçoCadastros.cs" />
+    <Compile Include="Controller\ServiçoEditar.cs" />
+    <Compile Include="Controller\ServiçoExcluir.cs" />
+    <Compile Include="Controller\ServiçoExibir.cs" />
+    <Compile Include="Controller\ServiçoLogin.cs" />
+    <Compile Include="View\frmAgenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmAgenda.Designer.cs">
+      <DependentUpon>frmAgenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmCadastrarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmCadastrarUsuario.Designer.cs">
+      <DependentUpon>frmCadastrarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmConsultaUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmConsultaUsuario.Designer.cs">
+      <DependentUpon>frmConsultaUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmModelodeCadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmModelodeCadastro.Designer.cs">
+      <DependentUpon>frmModelodeCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmPermissaoUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmPermissaoUsuario.Designer.cs">
+      <DependentUpon>frmPermissaoUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\RelatorioLocacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\RelatorioLocacao.Designer.cs">
+      <DependentUpon>RelatorioLocacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\RelatorioMotorista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\RelatorioMotorista.Designer.cs">
+      <DependentUpon>RelatorioMotorista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\RelatorioVeiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\RelatorioVeiculo.Designer.cs">
+      <DependentUpon>RelatorioVeiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\RelatorioViagens.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\RelatorioViagens.Designer.cs">
+      <DependentUpon>RelatorioViagens.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TelaAbastecimentoo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelaAbastecimentoo.Designer.cs">
+      <DependentUpon>TelaAbastecimentoo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TelaAgendaa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelaAgendaa.Designer.cs">
+      <DependentUpon>TelaAgendaa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TelaAvisoss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelaAvisoss.Designer.cs">
+      <DependentUpon>TelaAvisoss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TelaClientee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelaClientee.Designer.cs">
+      <DependentUpon>TelaClientee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TelaCompraVendaa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelaCompraVendaa.Designer.cs">
+      <DependentUpon>TelaCompraVendaa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TelaContasPagarr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelaContasPagarr.Designer.cs">
+      <DependentUpon>TelaContasPagarr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TelaContasReceberr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelaContasReceberr.Designer.cs">
+      <DependentUpon>TelaContasReceberr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TelaFinanceiroo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelaFinanceiroo.Designer.cs">
+      <DependentUpon>TelaFinanceiroo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TelaLocaçãoo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelaLocaçãoo.Designer.cs">
+      <DependentUpon>TelaLocaçãoo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TelaManutençãoo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelaManutençãoo.Designer.cs">
+      <DependentUpon>TelaManutençãoo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TelaMotoristaa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelaMotoristaa.Designer.cs">
+      <DependentUpon>TelaMotoristaa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TelaMultass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelaMultass.Designer.cs">
+      <DependentUpon>TelaMultass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TelaRelatorioss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelaRelatorioss.Designer.cs">
+      <DependentUpon>TelaRelatorioss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TelaSeguroMotoristaa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelaSeguroMotoristaa.Designer.cs">
+      <DependentUpon>TelaSeguroMotoristaa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TelaSeguroVeiculoo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelaSeguroVeiculoo.Designer.cs">
+      <DependentUpon>TelaSeguroVeiculoo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TelaSinistross.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelaSinistross.Designer.cs">
+      <DependentUpon>TelaSinistross.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TelaVeiculosDisponiveiss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelaVeiculosDisponiveiss.Designer.cs">
+      <DependentUpon>TelaVeiculosDisponiveiss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TelaVeiculoss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelaVeiculoss.Designer.cs">
+      <DependentUpon>TelaVeiculoss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TelaViagenss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelaViagenss.Designer.cs">
+      <DependentUpon>TelaViagenss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="View\frmAgenda.resx">
+      <DependentUpon>frmAgenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmCadastrarUsuario.resx">
+      <DependentUpon>frmCadastrarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmConsultaUsuario.resx">
+      <DependentUpon>frmConsultaUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmModelodeCadastro.resx">
+      <DependentUpon>frmModelodeCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmPermissaoUsuario.resx">
+      <DependentUpon>frmPermissaoUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\RelatorioLocacao.rdlc" />
+    <EmbeddedResource Include="View\RelatorioLocacao.resx">
+      <DependentUpon>RelatorioLocacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\RelatorioMotorista.rdlc" />
+    <EmbeddedResource Include="View\RelatorioMotorista.resx">
+      <DependentUpon>RelatorioMotorista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\RelatorioVeiculo.rdlc" />
+    <EmbeddedResource Include="View\RelatorioVeiculo.resx">
+      <DependentUpon>RelatorioVeiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\RelatorioViagens.rdlc" />
+    <EmbeddedResource Include="View\RelatorioViagens.resx">
+      <DependentUpon>RelatorioViagens.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TelaAbastecimentoo.resx">
+      <DependentUpon>TelaAbastecimentoo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TelaAgendaa.resx">
+      <DependentUpon>TelaAgendaa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TelaAvisoss.resx">
+      <DependentUpon>TelaAvisoss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TelaClientee.resx">
+      <DependentUpon>TelaClientee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TelaCompraVendaa.resx">
+      <DependentUpon>TelaCompraVendaa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TelaContasPagarr.resx">
+      <DependentUpon>TelaContasPagarr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TelaContasReceberr.resx">
+      <DependentUpon>TelaContasReceberr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TelaFinanceiroo.resx">
+      <DependentUpon>TelaFinanceiroo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TelaLocaçãoo.resx">
+      <DependentUpon>TelaLocaçãoo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TelaManutençãoo.resx">
+      <DependentUpon>TelaManutençãoo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TelaMotoristaa.resx">
+      <DependentUpon>TelaMotoristaa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TelaMultass.resx">
+      <DependentUpon>TelaMultass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TelaRelatorioss.resx">
+      <DependentUpon>TelaRelatorioss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TelaSeguroMotoristaa.resx">
+      <DependentUpon>TelaSeguroMotoristaa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TelaSeguroVeiculoo.resx">
+      <DependentUpon>TelaSeguroVeiculoo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TelaSinistross.resx">
+      <DependentUpon>TelaSinistross.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TelaVeiculosDisponiveiss.resx">
+      <DependentUpon>TelaVeiculosDisponiveiss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TelaVeiculoss.resx">
+      <DependentUpon>TelaVeiculoss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TelaViagenss.resx">
+      <DependentUpon>TelaViagenss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="EOP_DemoDataSet.xsc">
+      <DependentUpon>EOP_DemoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="EOP_DemoDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EOP_DemoDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="EOP_DemoDataSet.xss">
+      <DependentUpon>EOP_DemoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{7f5ef2f5-7574-4afe-8023-b5f604dc3afc}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{49b61cf6-220e-466b-ab12-4522ded440b7}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ferramentas\Ferramentas.csproj">
+      <Project>{89881b48-51b9-436f-a502-699d48dafc0b}</Project>
+      <Name>Ferramentas</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Modelo\Modelo.csproj">
+      <Project>{75e2a96e-4306-4fa3-aeb6-9374b0a837ac}</Project>
+      <Name>Modelo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ReportingServices.ReportViewerControl.Winforms">
+      <Version>140.1000.523</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
